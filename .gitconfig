@@ -1,0 +1,10 @@
+[user]
+	name = Jezer Chilel
+	email = jezer.chilel@gmail.com
+[core]
+	editor = vim
+[alias]
+	pushit = push origin HEAD
+	new = checkout -b
+	msg = commit -m
+	pullit = pull origin
