@@ -1,0 +1,20 @@
+#!/bin/bash
+
+TEXT_RESET='\e[0m'
+TEXT_YELLOW='\e[0;33m'
+TEXT_RED='\e[1;31m'
+
+sudo apt update
+echo -e $TEXT_YELLOW
+echo 'APT update finished...'
+echo -e $TEXT_RESET
+
+sudo apt upgrade --yes
+echo -e $TEXT_YELLOW
+echo 'APT upgrade finished..'
+echo -e $TEXT_RESET
+
+sudo apt autoremove --yes
+echo -e $TEXT_YELLOW
+echo 'APT autoremove finished...'
+echo -e $TEXT_RESET
