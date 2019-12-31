@@ -2,11 +2,17 @@ set t_Co=256
 set encoding=UTF-8
 set hls
 set number
-set copyindent
-set preserveindent
-set softtabstop=0
-set shiftwidth=2
+"set copyindent
+"set preserveindent
+" set softtabstop=2
+" set shiftwidth=2
+" set tabstop=1
+set wrap
+set linebreak
+filetype plugin indent on
 set tabstop=2
+set shiftwidth=2
+set expandtaba
 set belloff=all
 set timeoutlen=1000 ttimeoutlen=0
 set rnu
@@ -14,22 +20,23 @@ syn on
 set background=dark
 set splitbelow
 set splitright
+set autoindent
 
 if (has("termguicolors"))
 	set termguicolors
 endif
 
 " Delete line in insert mode
-imap <C-d> <esc>ddi
+" imap <C-d> <esc>ddi
 
 " Delete one chracter in insert mode
-imap <C-x> <esc>xi
+" imap <C-x> <esc>xi
 
 " Delete one character backwards in insert mode
-inoremap <C-X> <left><del>
+" inoremap <C-X> <left><del>
 
 " Undo changes in insert mode
-imap <C-u> <esc>ui
+" inoremap <C-u> <esc>ui
 
 " Ctrl + n to open NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -41,7 +48,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
-nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
+nnoremap <expr> ; (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
 
 " Close curly braces and brackets automatically
 inoremap {<cr> {<cr>}<c-o>O
@@ -55,10 +62,10 @@ inoremap <esc> <Nop>
 noremap! <Del> <Nop>
 " noremap! <BS> <Nop>
 
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+map <C-J> <C-W><C-J>
+map <C-K> <C-W><C-K>
+map <C-L> <C-W><C-L>
+map <C-H> <C-W><C-H>
 
 call plug#begin('~/.vim/plugged')
 
@@ -85,7 +92,7 @@ set laststatus=2
 set noshowmode
 
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -113,4 +120,8 @@ let g:fzf_colors =
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_commits_log_options = '--graph --color=always --format="%C()auto)%h%d %s %C()black)%C()bold)%cr"'
 
-let g:move_key_modifier = 'C'
+let g:move_key_modifier = 'N'
+
+let g:NERDTreeStatusLine = -1
+autocmd BufWritePre * :%s/\s+$//e
+
