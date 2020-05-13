@@ -1,10 +1,20 @@
 {
-    "workbench.colorTheme": "Atom One Light",
-    "window.zoomLevel": -1,
     "editor.lineNumbers": "relative",
-    "workbench.iconTheme": "vscode-icons",
-    "terminal.integrated.shell.windows": "C:\\Users\\jchilel\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+    "editor.fontSize": 12,
+    "editor.fontFamily": "Fira Code Retina",
+    "editor.fontLigatures": true,
+    // "editor.fontWeight": "300", // Light
+    // "editor.fontWeight": "400", // Regular
+    "editor.fontWeight": "500", // Medium
+    // "editor.fontWeight": "600", // Bold
+    "workbench.colorTheme": "Night Owl Light (No Italics)",
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "vscode-icons",
+    "prettier.jsxBracketSameLine": true,
+    "prettier.singleQuote": true,
+    "files.associations": {
+    
+    },
     "vim.insertModeKeyBindings": [
         {
             "before": ["j", "k"],
@@ -43,12 +53,4 @@
             ]
         }
     ],
-    "editor.fontFamily": "Fira Code Retina, Consolas, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 13,
-    "prettier.jsxBracketSameLine": true,
-    "prettier.singleQuote": true,
-    "files.associations": {
-    
-    }
 }
