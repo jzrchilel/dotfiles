@@ -1,0 +1,54 @@
+{
+    "workbench.colorTheme": "Atom One Light",
+    "window.zoomLevel": -1,
+    "editor.lineNumbers": "relative",
+    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.shell.windows": "C:\\Users\\jchilel\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+    "workbench.startupEditor": "newUntitledFile",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["Z", "Z"],
+            "commands": [
+                ":wq"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                "<C-b>"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        }
+    ],
+    "editor.fontFamily": "Fira Code Retina, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "prettier.jsxBracketSameLine": true,
+    "prettier.singleQuote": true,
+    "files.associations": {
+    
+    }
+}
