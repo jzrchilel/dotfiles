@@ -1,26 +1,30 @@
+set nocompatible
 set t_Co=256
 set encoding=UTF-8
-set hls
+syntax on
 set number
 "set copyindent
 "set preserveindent
 " set softtabstop=2
 " set shiftwidth=2
 " set tabstop=1
-set wrap
+set incsearch
+set autoindent
+set cursorline
+set nowrap
 set linebreak
 filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
-set expandtaba
 set belloff=all
 set timeoutlen=1000 ttimeoutlen=0
 set rnu
-syn on
+set title
 set background=dark
 set splitbelow
 set splitright
 set autoindent
+set guifont=Fira-Code-Regular
 
 if (has("termguicolors"))
 	set termguicolors
@@ -62,10 +66,17 @@ inoremap <esc> <Nop>
 noremap! <Del> <Nop>
 " noremap! <BS> <Nop>
 
+" Clear previous highlighted text
+nmap <silent> ,/ :nohlsearch<CR>
+
 map <C-J> <C-W><C-J>
 map <C-K> <C-W><C-K>
 map <C-L> <C-W><C-L>
 map <C-H> <C-W><C-H>
+
+" Move visual selection
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 call plug#begin('~/.vim/plugged')
 
@@ -124,4 +135,3 @@ let g:move_key_modifier = 'N'
 
 let g:NERDTreeStatusLine = -1
 autocmd BufWritePre * :%s/\s+$//e
-
