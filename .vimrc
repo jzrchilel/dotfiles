@@ -3,19 +3,23 @@ syntax on
 
 set autoindent
 set belloff=all
+set colorcolumn=110
+highlight ColorColumn ctermbg=darkgrey
 set cursorline
 set encoding=UTF-8
 set incsearch
 set linebreak
 set laststatus=2
 set number
+set noexpandtab
 set noshowmode
 set nocompatible
 set relativenumber
-set shiftwidth=2
+set shiftwidth=4
 set splitbelow
 set splitright
-set tabstop=2
+set softtabstop=4
+set tabstop=4
 set timeoutlen=1000 ttimeoutlen=0
 set title
 set t_Co=256
@@ -46,6 +50,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 vnoremap <c-t> :terminal ++rows=10<CR>
 nnoremap <c-t> :terminal ++rows=10<CR>
 
+autocmd filetype cpp nnoremap <leader>r :w<bar>term ++rows=10 ++shell g++ %:p -std=c++11 -o %:p:r && %:p:r<CR>
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'sainnhe/sonokai'
@@ -54,6 +60,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'dense-analysis/ale'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tmsvg/pear-tree'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 call plug#end()
 
@@ -75,7 +84,11 @@ let g:lightline = {
 \ }
 
 let g:ale_linters = { 'javascript': ['eslint'] }
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️'
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
 
 let g:ale_fix_on_save = 1
+
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
