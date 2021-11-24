@@ -1,3 +1,11 @@
+"          __     ______     ______     ______     ______
+"         /\ \   /\  ___\   /\___  \   /\  ___\   /\  == \
+"       _\_\ \  \ \  __\   \/_/  /__  \ \  __\   \ \  __<
+"     /\_____\  \ \_____\   /\_____\  \ \_____\  \ \_\ \_\
+"     \/_____/  \/_____/    /______/  \/_____/   \/_/  /_/
+"
+"     vim config of jezer <jezer.chilel@gmail.com>
+
 filetype plugin indent on
 syntax on
 
@@ -23,6 +31,7 @@ set tabstop=4
 set timeoutlen=1000 ttimeoutlen=0
 set title
 set t_Co=256
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 if (has("termguicolors"))
   set termguicolors
@@ -63,6 +72,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tmsvg/pear-tree'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'Yggdroot/indentLine'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -89,6 +100,19 @@ let g:ale_sign_warning = '--'
 
 let g:ale_fix_on_save = 1
 
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_seed_identifiers_with_syntax = 1
 
+let g:ycm_key_list_select_completion = []
+let g:ycm_key_list_previous_completion = []
+
+nnoremap <F1> :pclose<CR>:silent YcmCompleter GetDoc<CR>
+nnoremap <S-F1> :pclose<CR>
+nnoremap <C-F1> :YcmCompleter GetType<CR>
+nnoremap <F9> :YcmCompleter GoTo<CR>
+nnoremap <S-F9> :YcmCompleter GoToReferences<CR>
+nnoremap <F10> :YcmCompleter FixIt<CR>
+
+let g:ycm_use_clangd = 1
