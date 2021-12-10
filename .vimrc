@@ -45,7 +45,7 @@ set tabstop=2
 set timeoutlen=1000 ttimeoutlen=0
 set title
 set t_Co=256
-set guifont=DroidSansMono\ Nerd\ Font\ 11
+set guifont=JetBrains\ Mono
 " coc
 set hidden
 set nobackup
@@ -54,7 +54,7 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 "set background=light
-set guifont=Ubuntu\ Mono
+"set guifont=Ubuntu\ Mono
 
 autocmd FileType c,cpp setlocal equalprg=clang-format
 
@@ -213,7 +213,6 @@ if (has("termguicolors"))
 endif
 
 inoremap jk <esc>
-inoremap <esc> <Nop> 
 
 nmap <silent> ,/ :nohlsearch<CR>
 
@@ -226,7 +225,7 @@ vnoremap <c-t> :terminal ++rows=10<CR>
 nnoremap <c-t> :terminal ++rows=10<CR>
 
 " autocmd filetype cpp nnoremap <leader>r :w<bar>term ++rows=10 ++shell g++ %:p -std=c++11 -o %:p:r && %:p:r<CR>
-nnoremap <silent> <leader>r :!g++ -Wall % && ./a.out<cr>
+nnoremap <silent> <leader>r :!g++  -std=c++17 -Wall -Weffc++ -Wsign-conversion -Werror -pedantic-errors % && ./a.out<cr>
 
 call plug#begin('~/.vim/plugged')
 
