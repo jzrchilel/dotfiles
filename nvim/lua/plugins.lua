@@ -5,7 +5,6 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 return require"packer".startup(function(use)
-  use 'morhetz/gruvbox'
   use {
     'nvim-lualine/lualine.nvim',
     required = {
@@ -20,6 +19,8 @@ return require"packer".startup(function(use)
 	-- Language Support
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'nvim-treesitter/playground'
+  use 'morhetz/gruvbox'
+  use 'glepnir/zephyr-nvim'
 	use 'p00f/nvim-ts-rainbow'
 	use 'windwp/nvim-ts-autotag'
 	use 'bfrg/vim-cpp-modern'
@@ -31,8 +32,6 @@ return require"packer".startup(function(use)
     },
     config = function() require'nvim-tree'.setup {} end
   }
-
-
 	-- LSP
 	use "hrsh7th/nvim-cmp" -- Autocompletion plugin
 	use "hrsh7th/cmp-nvim-lsp"
@@ -42,4 +41,7 @@ return require"packer".startup(function(use)
 	use "neovim/nvim-lspconfig"
 	use "glepnir/lspsaga.nvim"
 	use "williamboman/nvim-lsp-installer"
+
+  use 'junegunn/fzf'
+  use 'junegunn/fzf.vim' 
 end)

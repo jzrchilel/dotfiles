@@ -15,12 +15,12 @@ vim.opt.hidden = true
 vim.opt.background = 'dark'
 vim.opt.termguicolors = true
 
-vim.cmd(string.format('colorscheme gruvbox'))
-
-vim.g.gruvbox_italic = 1
-vim.g.gruvbox_material_background = 'hard'
-vim.g.gruvbox_material_enable_italic = 1
-
 vim.cmd('highlight clear SignColumn')
+vim.cmd('colorscheme gruvbox')
 
 vim.g.cpp_member_highlight = true
+vim.g.mapleader = ';'
+
+vim.cmd('command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, {"options": ["--preview", "batcat {}"]}, <bang>0)')
+
+vim.cmd("command! -bang -nargs=? -complete=dir GFiles call fzf#vim#gitfiles(<q-args>, {'options': ['--preview', 'batcat {}']}, <bang>0)")
