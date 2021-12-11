@@ -21,3 +21,6 @@ vim.g.gruvbox_italic = 1
 vim.g.gruvbox_material_background = 'hard'
 vim.g.gruvbox_material_enable_italic = 1
 
+vim.cmd('highlight clear SignColumn')
+
+vim.g.cpp_member_highlight = true

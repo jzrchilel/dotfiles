@@ -16,13 +16,14 @@ return require"packer".startup(function(use)
   use 'NLKNguyen/papercolor-theme'
   -- use 'preservim/nerdtree'
   -- use 'kyazdani42/nvim-web-devicons'
+  use 'jiangmiao/auto-pairs'
 	-- Language Support
-	use {"nvim-treesitter/nvim-treesitter"}
-	use {"nvim-treesitter/playground"}
-	use {"p00f/nvim-ts-rainbow"}
-	use {'windwp/nvim-ts-autotag'}
+	use 'nvim-treesitter/nvim-treesitter'
+	use 'nvim-treesitter/playground'
+	use 'p00f/nvim-ts-rainbow'
+	use 'windwp/nvim-ts-autotag'
 	use 'bfrg/vim-cpp-modern'
-  use "lukas-reineke/indent-blankline.nvim"
+  use 'lukas-reineke/indent-blankline.nvim'
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
