@@ -19,9 +19,14 @@ return require"packer".startup(function(use)
 	-- Language Support
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'nvim-treesitter/playground'
+  -- Themes
   use 'morhetz/gruvbox'
-  use 'glepnir/zephyr-nvim'
+  use 'sainnhe/gruvbox-material'
+  use 'sainnhe/everforest'
+  use 'sainnhe/sonokai'
 	use 'p00f/nvim-ts-rainbow'
+  use 'folke/tokyonight.nvim'
+  
 	use 'windwp/nvim-ts-autotag'
 	use 'bfrg/vim-cpp-modern'
   use 'lukas-reineke/indent-blankline.nvim'

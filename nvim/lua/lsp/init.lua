@@ -18,7 +18,6 @@ require('formatter').setup({
 
 vim.api.nvim_exec([[
 augroup FormatAutogroup
-  autocmd!
   autocmd FileType cpp autocmd BufWritePost <buffer> FormatWrite
 augroup END
 ]], true)

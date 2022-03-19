@@ -8,7 +8,7 @@ keymap('i', 'jk', '<ESC>', opts)
 keymap('', '<C-n>', ':NvimTreeToggle<CR>', opts)
 
 -- Compile and run a .cpp file
-keymap('n', '<leader>r', ':!g++  -std=c++17 -Wall -Weffc++ -Wsign-conversion -Werror -pedantic-errors % && ./a.out<CR>', opts)
+keymap('n', '<leader>r', ':terminal g++  -std=c++17 -Wall % -Weffc++ -Wsign-conversion -Werror -pedantic-errors -g -o %.out && ./%.out<CR>', opts)
 
 -- Open a terminal
 keymap('v', '<C-t>', ':terminal ++rows=10<CR>', opts)
