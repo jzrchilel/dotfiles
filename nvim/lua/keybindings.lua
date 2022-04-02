@@ -27,3 +27,5 @@ keymap('n', '<leader>g', ':GFiles<CR>', opts)
 keymap('n', '<leader>b', ':Buffers<CR>', opts)
 keymap('n', '<leader>f', ':Files<CR>', opts)
 keymap('n', '<leader>e', ':History<CR>', opts)
+
+keymap("v", "<leader>cm",":CarbonNow<CR>", { noremap = true, silent = true})

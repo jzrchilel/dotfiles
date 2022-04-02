@@ -56,3 +56,4 @@ require'nvim-tree'.setup {
     require_confirm = true
   }
 }
+
