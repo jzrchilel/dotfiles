@@ -40,8 +40,12 @@ return require"packer".startup(function(use)
 	use 'windwp/nvim-ts-autotag'
 	use 'bfrg/vim-cpp-modern'
   use 'lukas-reineke/indent-blankline.nvim'
-  use 'kyazdani42/nvim-tree.lua'
-  use 'kyazdani42/nvim-web-devicons'
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons'
+    }
+  }
 	-- LSP
 	use "hrsh7th/nvim-cmp" -- Autocompletion plugin
 	use "hrsh7th/cmp-nvim-lsp"

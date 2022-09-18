@@ -69,11 +69,14 @@ vim.opt.guifont = 'JetBrains Mono'
 vim.opt.tabstop = 2
 vim.opt.title = true
 
+vim.cmd('let g:gruvbox_material_background = "medium"')
+vim.cmd('let g:gruvbox_material_better_performance = 1')
+
 vim.cmd('set t_Co=256')
 vim.cmd('syntax on')
-vim.cmd('colorscheme melange')
 --vim.cmd('colorscheme base16-default-dark')
 -- vim.cmd('colorscheme base16-gruvbox-dark-pale')
+vim.cmd('colorscheme gruvbox-material')
 vim.cmd('filetype plugin indent on')
 -- vim.cmd('highlight ColorColumn ctermbg=lightgrey guibg=lightgrey')
 

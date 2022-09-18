@@ -2,7 +2,7 @@ local DATA_PATH = vim.fn.stdpath('data')
 
 local function documentHighlight(client, bufnr)
     -- Set autocommands conditional on server_capabilities
-    if client.resolved_capabilities.document_highlight then
+    if client.server_capabilities.document_highlight then
         vim.api.nvim_exec([[
       hi LspReferenceRead cterm=bold ctermbg=red guibg=#464646
       hi LspReferenceText cterm=bold ctermbg=red guibg=#464646
@@ -33,5 +33,10 @@ require'lspconfig'.tsserver.setup {
     -- This makes sure tsserver is not used for formatting (I prefer prettier)
     -- on_attach = require'lsp'.common_on_attach,
     settings = {documentFormatting = false}
+}
+
+require'lspconfig'.pyright.setup {
+  cmd = { "pyright-langserver", "--stdio" },
+  filetypes = { "python" }
 }
 
