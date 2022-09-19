@@ -1,6 +1,8 @@
-polybar-msg cmd quit
+#!/bin/env bash
 
-polybar 2>&1 | tee -a /tmp/polybar.log & disown 
+killall -q polybar
 
-echo "Bar launched..."
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+polybar top &
 
