@@ -219,5 +219,5 @@ client.urgent $red $red $white $red $red
 
 # exec_always picom --experimental-backends
 
-exec_always feh --bg-fill /home/Images/bg.png
+exec_always feh --bg-fill /home/Images/bg1.jpg
 
