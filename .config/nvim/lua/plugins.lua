@@ -4,7 +4,6 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- You add plugins here  
   use {
     'nvim-lualine/lualine.nvim',
     requires = {
@@ -13,7 +12,6 @@ return require('packer').startup(function(use)
     }
   }
   use 'SmiteshP/nvim-gps'
-  use 'NLKNguyen/papercolor-theme'
   use 'jiangmiao/auto-pairs'
 	-- Language Support
   use {
@@ -25,15 +23,11 @@ return require('packer').startup(function(use)
   use 'm-demare/hlargs.nvim'
   use 'noib3/nvim-cokeline'
   use 'numToStr/Comment.nvim'
+
   -- Themes
   use 'morhetz/gruvbox'
-  use 'sainnhe/gruvbox-material'
-  use 'sainnhe/everforest'
-  use 'sainnhe/sonokai'
   use 'p00f/nvim-ts-rainbow'
-  use 'folke/tokyonight.nvim'
   use 'RRethy/nvim-base16'
-  -- use 'chriskempson/base16-vim'
   use 'windwp/nvim-ts-autotag'
   use 'bfrg/vim-cpp-modern'
   use 'lukas-reineke/indent-blankline.nvim'

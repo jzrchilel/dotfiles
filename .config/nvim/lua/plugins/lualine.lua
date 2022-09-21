@@ -3,7 +3,7 @@ local gps = require('nvim-gps')
 require'lualine'.setup {
   options = {
     icons_enabled = true,
-    theme = 'gruvbox_dark',
+    theme = 'gruvbox',
     component_separators = '',
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},

@@ -18,6 +18,7 @@ for_window [class="^.*"] border pixel 1
 gaps inner 15
 new_window pixel 2 
 new_float pixel 3
+hide_edge_borders smart
 
 # hide borders
 hide_edge_borders none

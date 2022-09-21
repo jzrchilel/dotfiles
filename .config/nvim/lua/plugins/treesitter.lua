@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"c", "javascript", "python"},
+    ensure_installed = {"c", "javascript", "python", "rust"},
     highlight = {enable = true},
     -- indent = {enable = true},
     -- playground = {
