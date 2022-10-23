@@ -1,0 +1,8 @@
+classic: false
+color:
+  when: auto
+  theme: default
+header: true
+total-size: false
+hyperlink: auto
+symlink-arrow: \u21d2

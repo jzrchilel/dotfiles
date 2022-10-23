@@ -1,2 +1,11 @@
+[$Version]
+update_info=okular.upd:annotation-toolbar,okular.upd:builtin-annotations
+
 [Main View]
 ShowLeftPanel=false
+
+[PageView]
+MouseMode=TextSelect
+
+[Reviews]
+QuickAnnotationDefaultAction=2

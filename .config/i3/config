@@ -13,7 +13,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Fira Code 10 
+font pango:JetBrains Mono 10 
 for_window [class="^.*"] border pixel 1 
 gaps inner 15
 new_window pixel 2 
@@ -226,6 +226,6 @@ client.placeholder      #282828 #282828 #ebdbb2 #282828 #282828
 
 # Run commans on startup
 exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-fill /home/Images/bg1.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/.config/i3/bg.png
 exec_always --no-startup-id compton -b
 

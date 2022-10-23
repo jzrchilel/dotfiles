@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
 
   -- Themes
   use 'morhetz/gruvbox'
+  use 'sainnhe/gruvbox-material'
   use 'p00f/nvim-ts-rainbow'
   use 'RRethy/nvim-base16'
   use 'windwp/nvim-ts-autotag'
