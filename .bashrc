@@ -18,3 +18,6 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 source ~/.bash_aliases
+
+alias cats='highlight -O ansi --force'
+
